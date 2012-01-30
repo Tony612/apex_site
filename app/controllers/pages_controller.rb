@@ -18,5 +18,8 @@ class PagesController < ApplicationController
   def store
     @title = "Store"
   end
-
+  
+  def download
+    @title = "Download"
+  end
 end

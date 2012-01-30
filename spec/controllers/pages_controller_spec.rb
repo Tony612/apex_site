@@ -76,4 +76,19 @@ describe PagesController do
 
   end
 
+  describe "GET 'download'" do
+    it "should be successful" do
+      get 'download'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'download'
+      response.should have_selector("title",
+                                    :content => @base_title + " | Download")
+    end
+
+  end
+
+
 end
