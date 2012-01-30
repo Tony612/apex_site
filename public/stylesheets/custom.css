@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #ECECEC;
+  background: #F1F1F1;
 }
 
 header {
@@ -13,6 +13,11 @@ header {
 
 header img {
   padding: 1em;
+}
+
+header nav {
+  margin:20px, 0px;
+  background: #E5E5E5;
 }
 
 section {
@@ -43,10 +48,6 @@ a:visited {
 }
 
 /* Navigation */
-
-nav {
-  float:right;
-}
 
 nav {
   background-color: white;
