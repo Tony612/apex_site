@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  padding-top: 20px;
+ /* padding-top: 20px;*/
 }
 
 header img {
@@ -18,6 +18,16 @@ header img {
 header nav {
   margin:20px, 0px;
   background: #E5E5E5;
+}
+
+header nav#toplink {
+  margin: 0;
+  background: #FFF;
+  float: right;
+}
+
+header nav#toplink ul li a {
+  font-size: 130%;
 }
 
 section {
