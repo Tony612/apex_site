@@ -10,11 +10,12 @@ gem 'gravatar_image_tag', '0.1.0'
 gem 'will_paginate', '3.0.pre2'
 gem 'pg', '0.13.0'
 gem 'rake', '0.8.7'
+gem 'faker', '0.3.1'
 
 group :development do
   gem 'rspec-rails', '2.0.1'
   gem 'annotate', '2.4.0'
-  gem 'faker', '0.3.1'
+#gem 'faker', '0.3.1'
 end
 
 group :test do
