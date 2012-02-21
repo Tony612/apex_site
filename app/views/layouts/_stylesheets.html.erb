@@ -5,4 +5,7 @@
     <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <% unless @title == "Home" %>
     <%= stylesheet_link_tag 'pagination_apple', :media => 'screen' %>
+    <% end %>
+    <%= stylesheet_link_tag 'slide', :media => 'screen' %>

@@ -1,15 +1,58 @@
-<h1>Apex Studio</h1>
-<p>
-  This is the home page for the site of Apex Studio.
-</p>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div id="show-slides" class="center">
+  <div id="slides" class="center">
+    <div class="slides_container" class="center">
+      <div class="slide">
+        <%= link_to image_tag("slide-1.jpg", :alt => "Slide 1"), 
+                  "http://www.flickr.com/photos/jliba/4665625073/", :target=> "_blank"%>
+        <div class="caption">
+          <p>Happy Bokeh Thursday!</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-2.jpg", :alt => "Slide 2"), 
+                  "http://www.flickr.com/photos/stephangeyer/3020487807/", :target=> "_blank"%>
+        <div class="caption">
+          <p>Taxi</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-3.jpg", :alt => "Slide 3"), 
+                  "http://www.flickr.com/photos/stephangeyer/3469233480", :target=> "_blank"%>
+        <div class="caption">
+          <p>Blindsided</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-4.jpg", :alt => "Slide 4"), 
+                  "http://www.flickr.com/photos/b-tal/117037943/", :target=> "_blank"%>
+        <div class="caption">
+          <p>We Eat Light</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-5.jpg", :alt => "Slide 5"), 
+                  "http://www.flickr.com/photos/stephangeyer/3293386770", :target=> "_blank"%>
+        <div class="caption">
+          <p>In Prelight Isolate</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-6.jpg", :alt => "Slide 6"), 
+                  "http://www.flickr.com/photos/stephangeyer/3150773337", :target=> "_blank"%>
+        <div class="caption">
+          <p>Sumo Sushi</p>
+        </div>
+      </div>
+      <div class="slide">
+        <%= link_to image_tag("slide-7.jpg", :alt => "Slide 7"), 
+                              "http://www.flickr.com/photos/aftab/3152515428/", :target=> "_blank"%>
+        <div class="caption">
+          <p>Save my love for loneliness</p>
+        </div>
+      </div>
+    </div>
+    <%= link_to image_tag("arrow-prev.png", :alt => "Arrow Prev", :class => "prev"), "#" %>
+    <%= link_to image_tag("arrow-next.png", :alt => "Arrow Next", :class => "next"), "#" %>
+  </div>
+  <%= image_tag("slides-frame.png", :alt=> "Slides Frame", :id => "frame") %>
+</div>
