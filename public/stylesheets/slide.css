@@ -8,8 +8,8 @@
 #frame {
 	z-index:0;
     position:relative;
-    top:-610px;
-    left:-88px;
+    top:-644px;
+    left:-94px;
 }
 
 /*
@@ -57,9 +57,9 @@
 */
 
 #slides .next,#slides .prev {
-	position:absolute;
-	top:480px;
-	left:137px;
+	position:relative;
+	top:-270px;
+	left:-24px;
 	width:24px;
 	height:43px;
 	display:block;
@@ -67,7 +67,8 @@
 }
 
 #slides .next {
-	left:1184px;
+    top:-302px;
+	left:1024px;
 }
 
 /*
@@ -75,7 +76,7 @@
 */
 
 #slides .pagination {
-	margin:50px auto 0;
+	margin:-10px auto 0;
 	width:100px;
 }
 
@@ -119,4 +120,9 @@
 	color:#fff;
 	border-top:1px solid #000;
 	text-shadow:none;
+}
+
+.slide .caption p {
+  font-size:72%;
+  float:left;
 }
