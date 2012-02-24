@@ -5,9 +5,19 @@
     <%= csrf_meta_tag%>
     <%= render 'layouts/stylesheets'%>
     <%= javascript_include_tag 'application.js' %>
+    <%= javascript_include_tag 'jquery-1.7.1.min.js' %>
     <% if @title == "Home" %>
       <%= render 'layouts/js-slides' %>
     <% end %>
+    <%= javascript_include_tag "bootstrap-dropdown.js" %>
+    <script type="text/javascript">
+      $("document").ready(function(){
+          $("ul#top-fixed li").click(function(){
+              $("ul#top-fixed li").removeClass("active");
+              $(this).addClass("active");
+            });
+      });
+    </script>
   </head>
   <body>
     <div id="container">
