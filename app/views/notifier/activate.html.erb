@@ -1,0 +1,7 @@
+<h1>Mail from Apex</h1>
+
+<strong>Dear <%= @user.name %></strong>
+Welcome to Apex.
+Apex received a sign-up request using <%= @user.email %>.
+If it is in deed from you and you wish to activate your account,click 
+<%= link_to @url, @url %>

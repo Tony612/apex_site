@@ -4,8 +4,8 @@
     <title><%= title %></title>
     <%= csrf_meta_tag%>
     <%= render 'layouts/stylesheets'%>
-    <%= javascript_include_tag 'application.js' %>
-    <%= javascript_include_tag 'jquery-1.7.1.min.js' %>
+    <%= javascript_include_tag :defaults %>
+    <!--<%= javascript_include_tag 'jquery-1.7.1.min.js' %>-->
     <% if @title == "Home" %>
       <%= render 'layouts/js-slides' %>
     <% end %>
