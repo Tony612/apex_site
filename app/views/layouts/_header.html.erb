@@ -19,7 +19,7 @@
                   <input type="text" class="search-query" placeholder="Search">
                 </form>
                 <ul class="nav pull-right" id="top-fixed">
-                  <% if signed_in? %>
+                  <% if signed_in? && current_user.activated? %>
                   <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
                       <%= current_user.name %>
@@ -34,7 +34,7 @@
                   </li>
                   <% end %>
                   <li <%if@title=="bbs"%>class="active"<%end%>><%= link_to "BBS", "#" %></li>
-                  <% if signed_in? %>
+                  <% if signed_in? && current_user.activated? %>
                   <li <%if@title=="signout"%>class="active"<%end%>><%= link_to "Sign out", signout_path, :method => :delete %></li>
                   <% else %>
                   <li <%if@title=="signin"%>class="active"<%end%>><%= link_to "Sign in", signin_path %></li>
