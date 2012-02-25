@@ -15,11 +15,8 @@ class User < ActiveRecord::Base
                        :length        => { :within => 6..30 }
 
   before_save :encrypt_password
-<<<<<<< HEAD
 
-=======
   before_create :make_activation_code
->>>>>>> email-activaty
   # Return true if the user's password matches the submitted password
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -34,10 +31,6 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end
-<<<<<<< HEAD
-
-  
-=======
  
   def send_new_password
     new_pass = User.random_string(10)
@@ -62,7 +55,6 @@ class User < ActiveRecord::Base
     activation_code.nil?
   end
 
->>>>>>> email-activaty
   private
     def encrypt_password
       self.salt = make_salt if new_record?
