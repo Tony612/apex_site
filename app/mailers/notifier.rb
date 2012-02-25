@@ -19,7 +19,8 @@ class Notifier < ActionMailer::Base
   #
   def activate(user)
     @user = user
-    @url = "http://apex-studio.herokuapp.com/activate?code=#{user.activation_code}"
+#@url = "http://apex-studio.herokuapp.com/activate?code=#{user.activation_code}"
+    @url = "http://localhost:3000/activate?code=#{user.activation_code}"
 #   @recipients = user.email
 #   @from = "hbing@7th-chapter.com"
 #   @subject = "Please activate your new account"

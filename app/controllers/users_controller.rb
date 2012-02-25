@@ -77,6 +77,7 @@ class UsersController < ApplicationController
       if signed_in? && !@user.activated?
         @user.update_attribute(:activation_code,  nil)
         @user.update_attribute(:activated_at, Time.now)
+        @user.update_attribute(:password, @user.password)
         flash[:notice] = "Signup complete!"
         redirect_to current_user
       else
