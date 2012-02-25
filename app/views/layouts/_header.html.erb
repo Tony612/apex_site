@@ -38,6 +38,7 @@
                   <li <%if@title=="signout"%>class="active"<%end%>><%= link_to "Sign out", signout_path, :method => :delete %></li>
                   <% else %>
                   <li <%if@title=="signin"%>class="active"<%end%>><%= link_to "Sign in", signin_path %></li>
+                  <li <%if@title=="Signup"%>class="active"<%end%>><%= link_to "Sign up", signup_path %><li>
                   <% end %>
                 </ul>
               </div>
