@@ -23,9 +23,14 @@ class UsersController < ApplicationController
     else
       @user = User.new(params[:user])
       if @user.save
-        sign_in @user
-        flash[:success] = "Welcome to Apex Studio."
-        redirect_to @user
+         sign_in @user
+         Notifier.activate(@user).deliver
+
+         flash[:notice] = "Signup successful. Activation e-mail has been sent to your email.Please go to check it."
+#redirect_to "#"
+#flash[:success] = "Welcome to Apex Studio."
+      
+#       redirect_to @user
       else
         @title = "Sign up"
         @user.password = ""
@@ -65,10 +70,23 @@ class UsersController < ApplicationController
     end
     redirect_to users_path
   end
+  
+  def activate
+#      @user = params[:code].blank? ? false: User.find_by_activation_code(params[:code])
+      @user = params[:code].blank? ? false : User.find_by_activation_code(params[:code])      
+      if signed_in? && !@user.activated?
+        @user.update_attribute(:activation_code,  nil)
+        @user.update_attribute(:activated_at, Time.now)
+        flash[:notice] = "Signup complete!"
+        redirect_to current_user
+      else
+        redirect_to signin_path
+      end
+  end
 
   private
     def authenticate
-      deny_access unless signed_in?
+      deny_access if !signed_in? || !current_user.activated?
     end
 
     def correct_user

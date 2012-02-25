@@ -3,10 +3,11 @@ ApexSite::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/signup', :to => 'users#new'
+  match '/activate', :to => 'users#activate'
 
   match '/signin', :to => 'sessions#new'
-  match 'signout', :to => 'sessions#destroy'
-  
+  match '/signout', :to => 'sessions#destroy'
+
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/support', :to => 'pages#support'
